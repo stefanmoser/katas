@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+puts "Enter the name of the kata:"
+kata_name = readline.chomp.strip.gsub(" ","_").downcase
+
+`mkdir #{kata_name}`
+
+current_time = Time.now
+date_string = current_time.strftime("%Y_%m_%d")
+full_path = kata_name + "/" + date_string
+
+`cp -R template #{full_path}`
