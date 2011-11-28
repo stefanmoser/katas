@@ -1,0 +1,5 @@
+c:\Code\katas\roman_numerals\2011_11_28\app\bin\Debug\app.dll
+c:\Code\katas\roman_numerals\2011_11_28\app\bin\Debug\app.pdb
+c:\Code\katas\roman_numerals\2011_11_28\app\obj\Debug\ResolveAssemblyReference.cache
+c:\Code\katas\roman_numerals\2011_11_28\app\obj\Debug\app.dll
+c:\Code\katas\roman_numerals\2011_11_28\app\obj\Debug\app.pdb

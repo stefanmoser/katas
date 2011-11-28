@@ -1,0 +1,15 @@
+c:\Code\katas\roman_numerals\2011_11_28\tests\obj\Debug\ResolveAssemblyReference.cache
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\tests.dll
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\tests.pdb
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\app.dll
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\developwithpassion.specifications.dll
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\developwithpassion.specifications.rhinomocks.dll
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\Machine.Fakes.Adapters.RhinoMocks.dll
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\Machine.Fakes.dll
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\Machine.Specifications.dll
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\Rhino.Mocks.dll
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\app.pdb
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\developwithpassion.specifications.pdb
+c:\Code\katas\roman_numerals\2011_11_28\tests\bin\Debug\developwithpassion.specifications.rhinomocks.pdb
+c:\Code\katas\roman_numerals\2011_11_28\tests\obj\Debug\tests.dll
+c:\Code\katas\roman_numerals\2011_11_28\tests\obj\Debug\tests.pdb

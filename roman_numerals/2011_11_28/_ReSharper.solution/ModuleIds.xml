@@ -1,0 +1,23 @@
+<Modules>
+  <Module PersistentId="7E75D5B2-AF56-4F42-A7CE-D3D035FB6FD6" ModuleId="tests" />
+  <Module PersistentId="D221FC0E-C10D-471F-94C5-F38FC8528E52" ModuleId="app" />
+  <Module PersistentId="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System" />
+  <Module PersistentId="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Core" />
+  <Module PersistentId="Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="Microsoft.CSharp" />
+  <Module PersistentId="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="mscorlib" />
+  <Module PersistentId="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="System.Configuration" />
+  <Module PersistentId="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Xml" />
+  <Module PersistentId="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="System.Security" />
+  <Module PersistentId="System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Data.SqlXml" />
+  <Module PersistentId="System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Numerics" />
+  <Module PersistentId="System.Dynamic, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="System.Dynamic" />
+  <Module PersistentId="tests" ModuleId="tests_1" />
+  <Module PersistentId="app" ModuleId="app_1" />
+  <Module PersistentId="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f" ModuleId="Rhino.Mocks" />
+  <Module PersistentId="Machine.Specifications, Version=0.4.24.0, Culture=neutral, PublicKeyToken=null" ModuleId="Machine.Specifications" />
+  <Module PersistentId="Machine.Specifications.TDNetRunner, Version=0.4.24.0, Culture=neutral, PublicKeyToken=null" ModuleId="Machine.Specifications.TDNetRunner" />
+  <Module PersistentId="Machine.Fakes, Version=0.2.8.0, Culture=neutral, PublicKeyToken=null" ModuleId="Machine.Fakes" />
+  <Module PersistentId="Machine.Fakes.Adapters.Rhinomocks, Version=0.2.8.0, Culture=neutral, PublicKeyToken=null" ModuleId="Machine.Fakes.Adapters.Rhinomocks" />
+  <Module PersistentId="developwithpassion.specifications, Version=0.4.24.3, Culture=neutral, PublicKeyToken=null" ModuleId="developwithpassion.specifications" />
+  <Module PersistentId="developwithpassion.specifications.rhinomocks, Version=0.4.24.3, Culture=neutral, PublicKeyToken=null" ModuleId="developwithpassion.specifications.rhinomocks" />
+</Modules>
