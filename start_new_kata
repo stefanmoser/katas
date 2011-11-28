@@ -11,4 +11,5 @@ full_path = kata_name + "/" + date_string
 
 `cp -R template #{full_path}`
 
+puts "Launching Visual Studio . . ."
 `"C:/Program Files (x86)/Microsoft Visual Studio 10.0/Common7/IDE/devenv.exe" ./#{full_path}/solution.sln`
