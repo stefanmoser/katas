@@ -1,5 +1,6 @@
 ﻿using Machine.Specifications;
 using app;
+using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.rhinomocks;
 
 namespace tests
@@ -10,34 +11,23 @@ namespace tests
          public class concern : Observes<IConvertRomanNumerals,
                                     RomanNumeralConverter>
          {
-             public class when_converting_a_base_roman_numeral : concern
-             {
-                 Establish context = () =>
-                     the_integer = 1;
-                 
-                 Because of = () =>
-                     result = sut.convert_to_roman_numeral(the_integer);
-
-                 It should_convert_into_an_integer = () =>
-                     result.ShouldEqual("I");
-
-                 static string result;
-                 static int the_integer;
-             }
-
              public class when_converting_an_additive_numeral : concern
              {
                  Establish context = () =>
-                     the_integer = 2;
+                    {
+                        the_integer = 5;
+                        single_numeral_converter = depends.on<IConvertSingleNumerals>();
+                        single_numeral_converter.setup((x => x.handle_integer(the_integer))).Return(RomanNumeral.Five);
+                    };
 
                  Because of = () =>
-                     result = sut.convert_to_roman_numeral(the_integer);
+                     sut.convert_to_roman_numeral(the_integer);
 
-                 It should_convert_into_an_integer = () =>
-                     result.ShouldEqual("II");
+                 It should_delegate_the_interger_to_the_largest_handler = () =>
+                     single_numeral_converter.received(x => x.handle_integer(the_integer));
 
-                 static string result;
                  static int the_integer;
+                 static IConvertSingleNumerals single_numeral_converter;
              }
          }
     }
