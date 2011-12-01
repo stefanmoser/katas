@@ -42,6 +42,7 @@
     <Compile Include="RomanNumeral.cs" />
     <Compile Include="RomanNumeralConverter.cs" />
     <Compile Include="SingleNumeralConverter.cs" />
+    <Compile Include="SingleNumeralConverterChain.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

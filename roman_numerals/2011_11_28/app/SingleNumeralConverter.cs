@@ -5,10 +5,12 @@ namespace app
     public class SingleNumeralConverter : IConvertSingleNumerals
     {
         RomanNumeral the_numeral;
+        IConvertSingleNumerals next_converter;
 
-        public SingleNumeralConverter(RomanNumeral theNumeral)
+        public SingleNumeralConverter(RomanNumeral the_numeral, IConvertSingleNumerals next_converter)
         {
-            the_numeral = theNumeral;
+            this.the_numeral = the_numeral;
+            this.next_converter = next_converter;
         }
 
         public RomanNumeral handle_integer(int the_interger)
@@ -18,7 +20,7 @@ namespace app
                 return the_numeral;
             }
 
-            throw new NotImplementedException();
+            return next_converter.handle_integer(the_interger);
         }
     }
 }

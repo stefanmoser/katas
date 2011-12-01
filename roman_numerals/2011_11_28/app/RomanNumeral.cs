@@ -4,6 +4,8 @@ namespace app
     {
         public static RomanNumeral One = new RomanNumeral(1, "I");
         public static RomanNumeral Five = new RomanNumeral(5, "V");
+        public static RomanNumeral Ten = new RomanNumeral(10, "X");
+        public static RomanNumeral Fifty = new RomanNumeral(50, "L");
 
         private int _integer_value;
         private string _numeral_string;

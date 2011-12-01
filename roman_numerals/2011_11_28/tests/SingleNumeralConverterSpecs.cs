@@ -28,7 +28,7 @@ namespace tests
                  static int the_integer;
                  static RomanNumeral result;
              }
-
+             
              public class when_handling_an_integer_that_is_smaller_than_the_expected_numeral : concern
              {
 
@@ -36,6 +36,7 @@ namespace tests
                  {
                      the_integer = 1;
                      depends.on(RomanNumeral.Five);
+                     next_handler = depends.on<IConvertSingleNumerals>();
                  };
 
                  Because of = () =>
