@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace app
+﻿namespace app
 {
     public class SingleNumeralConverter : IConvertSingleNumerals
     {

@@ -10,9 +10,14 @@ namespace app
         {
             List<RomanNumeral> numerals = new List<RomanNumeral>();
             numerals.Add(RomanNumeral.One);
+            numerals.Add(RomanNumeral.Four);
             numerals.Add(RomanNumeral.Five);
+            numerals.Add(RomanNumeral.Nine);
             numerals.Add(RomanNumeral.Ten);
+            numerals.Add(RomanNumeral.Fourty);
             numerals.Add(RomanNumeral.Fifty);
+            numerals.Add(RomanNumeral.Ninety);
+            numerals.Add(RomanNumeral.OneHundred);
 
             chain_head = null;
 

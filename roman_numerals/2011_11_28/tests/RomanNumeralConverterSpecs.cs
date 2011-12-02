@@ -52,7 +52,7 @@ namespace tests
              {
                  Establish context = () =>
                     {
-                        the_interger = 77;
+                        the_interger = 99;
                         depends.on(SingleNumeralConverterChain.first_converter);
                     };
 
