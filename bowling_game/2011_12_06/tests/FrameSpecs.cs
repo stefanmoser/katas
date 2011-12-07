@@ -56,6 +56,41 @@ namespace tests
                 static int result;
                 static IFrame previousFrame;
             }
+
+            public class after_bowling_a_strike : Concern
+            {
+                Because of = () =>
+                    {
+                        sut.Roll(10);
+                        sut.NextFrameRoll(4);
+                        sut.NextFrameRoll(3);
+
+                        result = sut.CalculateScore();
+                    };
+
+                It should_add_the_next_two_rolls_as_the_bonus_score = () =>
+                    result.ShouldEqual(17);
+
+                static int result;
+            }
+
+            public class after_bowling_a_spare : Concern
+            {
+                Because of = () =>
+                    {
+                        sut.Roll(6);
+                        sut.Roll(4);
+                        sut.NextFrameRoll(4);
+                        sut.NextFrameRoll(3);
+
+                        result = sut.CalculateScore();
+                    };
+
+                It should_add_the_next_roll_as_the_bonus_score = () =>
+                    result.ShouldEqual(14);
+
+                static int result;
+            }
         }
     }
 }

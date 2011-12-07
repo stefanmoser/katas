@@ -43,19 +43,44 @@ namespace tests
                 static int result;
             }
 
-            public class when_bowling_a_spare : Concern
+            public class after_bowling_a_complete_game : Concern
             {
                 Because of = () =>
                     {
+                        sut.Roll(1);
+                        sut.Roll(4);
+
+                        sut.Roll(4);
+                        sut.Roll(5);
+
+                        sut.Roll(6);
+                        sut.Roll(4);
+
                         sut.Roll(5);
                         sut.Roll(5);
+
+                        sut.Roll(10);
+
+                        sut.Roll(0);
+                        sut.Roll(1);
+
+                        sut.Roll(7);
+                        sut.Roll(3);
+
+                        sut.Roll(6);
+                        sut.Roll(3);
+
+                        sut.Roll(10);
+
                         sut.Roll(2);
+                        sut.Roll(8);
+                        sut.Roll(6);
 
                         result = sut.CalculateScore();
                     };
 
-                It should_include_the_bonus_roll_in_the_score = () =>
-                    result.ShouldEqual(14);
+                It should_calculate_the_correct_score = () =>
+                    result.ShouldEqual(133);
 
                 static int result;
             }
