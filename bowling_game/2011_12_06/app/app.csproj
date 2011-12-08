@@ -39,6 +39,7 @@
     <Compile Include="BowlingGame.cs" />
     <Compile Include="Frame.cs" />
     <Compile Include="IFrame.cs" />
+    <Compile Include="NullFrame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

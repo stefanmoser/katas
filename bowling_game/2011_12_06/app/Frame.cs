@@ -13,7 +13,7 @@
             this.previousFrame = previousFrame;
         }
 
-        public void Roll(int numberOfPinsKnockedDown)
+        public bool Roll(int numberOfPinsKnockedDown)
         {
             score += numberOfPinsKnockedDown;
             previousFrame.NextFrameRoll(numberOfPinsKnockedDown);
@@ -23,6 +23,8 @@
             {
                 numberOfBonusRolls = 3 - numberOfRolls;
             }
+
+            return numberOfRolls == 2 || score == 10;
         }
 
         public void NextFrameRoll(int numberOfPinsKnockedDown)
