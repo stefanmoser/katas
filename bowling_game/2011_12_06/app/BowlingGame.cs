@@ -5,14 +5,18 @@ namespace app
 {
     public class BowlingGame
     {
+        readonly FrameFactory frameFactory;
+
         IList<IFrame> frames;
         IFrame currentFrame;
 
-        public BowlingGame()
+        public BowlingGame(FrameFactory frameFactory)
         {
+            this.frameFactory = frameFactory;
             frames = new List<IFrame>();
             currentFrame = new NullFrame();
-            StartNewFrame(new RegularFrameCompletionStrategy());
+
+            StartNewFrame();
         }
 
         public void Roll(int numberOfPinsKnockedDown)
@@ -20,14 +24,7 @@ namespace app
             bool isFrameComplete = currentFrame.Roll(numberOfPinsKnockedDown);
             if (isFrameComplete)
             {
-                if (frames.Count == 9)
-                {
-                    StartNewFrame(new TenthFrameCompletionStrategy());
-                }
-                else
-                {
-                    StartNewFrame(new RegularFrameCompletionStrategy());
-                }
+                StartNewFrame();
             }
         }
 
@@ -36,9 +33,9 @@ namespace app
             return frames.Sum(x => x.CalculateScore());
         }
 
-        private void StartNewFrame(IDetermineIfAFrameIsComplete frameCompletionStrategy)
+        private void StartNewFrame()
         {
-            var nextFrame = new Frame(currentFrame, frameCompletionStrategy);
+            var nextFrame = frameFactory.StartNewFrame(currentFrame, frames.Count);
             frames.Add(nextFrame);
             currentFrame = nextFrame;
         }

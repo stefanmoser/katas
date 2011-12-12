@@ -38,6 +38,8 @@
   <ItemGroup>
     <Compile Include="BowlingGame.cs" />
     <Compile Include="Frame.cs" />
+    <Compile Include="FrameFactory.cs" />
+    <Compile Include="ICreateFrames.cs" />
     <Compile Include="IDetermineIfAFrameIsComplete.cs" />
     <Compile Include="IFrame.cs" />
     <Compile Include="NullFrame.cs" />
