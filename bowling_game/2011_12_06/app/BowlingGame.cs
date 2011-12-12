@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace app
@@ -13,7 +12,7 @@ namespace app
         {
             frames = new List<IFrame>();
             currentFrame = new NullFrame();
-            StartNewFrame();
+            StartNewFrame(new RegularFrameCompletionStrategy());
         }
 
         public void Roll(int numberOfPinsKnockedDown)
@@ -23,11 +22,11 @@ namespace app
             {
                 if (frames.Count == 9)
                 {
-                    throw new NotImplementedException();
+                    StartNewFrame(new TenthFrameCompletionStrategy());
                 }
                 else
                 {
-                    StartNewFrame();
+                    StartNewFrame(new RegularFrameCompletionStrategy());
                 }
             }
         }
@@ -37,9 +36,9 @@ namespace app
             return frames.Sum(x => x.CalculateScore());
         }
 
-        private void StartNewFrame()
+        private void StartNewFrame(IDetermineIfAFrameIsComplete frameCompletionStrategy)
         {
-            var nextFrame = new Frame(currentFrame);
+            var nextFrame = new Frame(currentFrame, frameCompletionStrategy);
             frames.Add(nextFrame);
             currentFrame = nextFrame;
         }

@@ -68,7 +68,7 @@ namespace tests
                         sut.Roll(3);
 
                         sut.Roll(6);
-                        sut.Roll(3);
+                        sut.Roll(4);
 
                         sut.Roll(10);
 

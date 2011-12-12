@@ -4,13 +4,15 @@
     {
         int score;
         IFrame previousFrame;
+        readonly IDetermineIfAFrameIsComplete frameCompletionStrategy;
 
         int numberOfRolls;
         int numberOfBonusRolls;
 
-        public Frame(IFrame previousFrame)
+        public Frame(IFrame previousFrame, IDetermineIfAFrameIsComplete frameCompletionStrategy)
         {
             this.previousFrame = previousFrame;
+            this.frameCompletionStrategy = frameCompletionStrategy;
         }
 
         public bool Roll(int numberOfPinsKnockedDown)
@@ -24,7 +26,12 @@
                 numberOfBonusRolls = 3 - numberOfRolls;
             }
 
-            return numberOfRolls == 2 || score == 10;
+            return IsFrameComplete();
+        }
+
+        bool IsFrameComplete()
+        {
+            return frameCompletionStrategy.IsFrameComplete(numberOfRolls, score);
         }
 
         public void NextFrameRoll(int numberOfPinsKnockedDown)

@@ -8,7 +8,7 @@ namespace tests
     [Subject(typeof (Frame))]
     public class FrameSpecs
     {
-        public class Concern : Observes<Frame>
+        public class Concern : Observes<IFrame, Frame>
         {
             public class when_bowling_two_gutter_balls : Concern
             {
@@ -28,6 +28,9 @@ namespace tests
 
             public class when_bowling_two_singles : Concern
             {
+                Establish context = () =>
+                    depends.on<IDetermineIfAFrameIsComplete>(new RegularFrameCompletionStrategy());
+
                 Because of = () =>
                     {
                         sut.Roll(1);
@@ -66,6 +69,9 @@ namespace tests
 
             public class after_bowling_a_strike : Concern
             {
+                Establish context = () =>
+                    depends.on<IDetermineIfAFrameIsComplete>(new RegularFrameCompletionStrategy());
+
                 Because of = () =>
                     {
                         isFrameComplete = sut.Roll(10);
