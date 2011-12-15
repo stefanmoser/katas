@@ -11,7 +11,7 @@
 
         public bool Matches(string theString)
         {
-            return theString.Contains(_substringToMatch);
+            return theString.ToLower().Contains(_substringToMatch.ToLower());
         }
     }
 }

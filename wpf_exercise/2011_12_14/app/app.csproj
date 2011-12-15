@@ -36,6 +36,9 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IContainFileInformation.cs" />
+    <Compile Include="FileSystemMatcher.cs" />
+    <Compile Include="IMatchFiles.cs" />
     <Compile Include="IMatchStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ContainsStringMatcher.cs" />
