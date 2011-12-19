@@ -49,6 +49,27 @@ namespace tests
                 static string fileName;
                 static IEnumerable<IContainFileInformation> result;
             }
+
+            public class when_matching_files_that_do_not_match :Concern
+            {
+                Establish context = () =>
+                    {
+                        nonMatchingFile = MockRepository.GenerateStub<IContainFileInformation>();
+                        stringMatcher = depends.on<IMatchStrings>();
+
+                        stringMatcher.setup(x => x.Matches(Arg<string>.Is.Anything)).Return(false);
+                    };
+
+                Because of = () =>
+                    result = sut.MatchFiles(nonMatchingFile);
+
+                It should_not_return_the_files = () =>
+                    result.ShouldBeEmpty();
+
+                static IEnumerable<IContainFileInformation> result;
+                static IContainFileInformation nonMatchingFile;
+                static IMatchStrings stringMatcher;
+            }
         }
     }
 }

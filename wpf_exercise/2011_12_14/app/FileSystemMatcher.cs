@@ -4,7 +4,7 @@ namespace app
 {
     public class FileSystemMatcher : IMatchFiles
     {
-        IMatchStrings stringMatcher;
+        readonly IMatchStrings stringMatcher;
 
         public FileSystemMatcher(IMatchStrings stringMatcher)
         {
