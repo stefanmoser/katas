@@ -2,16 +2,16 @@
 {
     public class ContainsStringMatcher : IMatchStrings
     {
-        readonly string _substringToMatch;
+        readonly string substringToMatch;
 
         public ContainsStringMatcher(string substringToMatch)
         {
-            _substringToMatch = substringToMatch;
+            this.substringToMatch = substringToMatch;
         }
 
         public bool Matches(string theString)
         {
-            return theString.ToLower().Contains(_substringToMatch.ToLower());
+            return theString.ToLower().Contains(substringToMatch.ToLower());
         }
     }
 }
